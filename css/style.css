@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: 'Vaud Display', sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -62,4 +62,44 @@ body {
 
 .view--btn {
   cursor: pointer;
+}
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer--section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-direction: normal;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.dim {
+  opacity: 1;
+}
+
+.dim, .dim:focus, .dim:hover {
+  transition: opacity .15s ease-in;
+}
+
+.dim:hover {
+  opacity: .5;
+}
+
+.color-inherit {
+  color: inherit;
 }
