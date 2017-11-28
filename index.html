@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/formalize.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/tooltip.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script>
         var app = angular.module('myApp', []);
         app.controller('myCtrl', function($scope) {
             $scope.matches = [
+                ["—", "Friendly", "16.07.2017", "18:00", "Fortuna Sittard", "2-2", "—", "—", "Sunny", "D"],
+                ["—", "Friendly", "19.07.2017", "15:00", "Schalke 04", "2-3", "Zhuhai Sports Centre", "—", "Sunny", "L"],
+                ["—", "Friendly", "25.07.2017", "21:00", "Valladolid", "2-2", "Marbella", "—", "Sunny", "D"],
+                ["—", "Friendly", "27.07.2017", "21:00", "R. Betis", "1-4", "Marbella", "—", "Sunny", "L"],
+                ["—", "Friendly", "30.07.2017", "21:00", "R. Betis", "1-1", "Nuevo Mirador", "—", "Sunny", "D"],
                 ["Final", "TSC", "06.08.2017", "20:45", "A. Konyaspor", "1-2", "Samsun Yeni 19 Mayis", "—", "Sunny", "L"],
                 ["W1", "TSL", "13.08.2017", "21:45", "Antalyaspor", "2-0", "Vodafone Park", "—", "Sunny", "W"],
                 ["W2", "TSL", "18.08.2017", "21:45", "Kasimpasa", "2-2", "Recep Tayyip Erdogan", "—", "Sunny", "D"],
                 ["W3", "TSL", "26.08.2017", "19:45", "Bursaspor", "2-1", "Vodafone Park", "—", "Sunny", "W"],
+                ["—", "Friendly", "02.09.2017", "19:00", "Kayserispor", "1-1", "Vodafone Park", "—", "Sunny", "D"],
                 ["W4", "TSL", "09.09.2017", "17:00", "Karabukspor", "1-0", "Dr. Necmettin Seyhoglu", "—", "Sunny", "W"],
                 ["W1", "UCL", "13.09.2017", "21:45", "Porto", "3-1", "Estadio do Dragao ", "42,429", "Sunny", "W"],
                 ["W5", "TSL", "18.09.2017", "17:00", "Konyaspor", "2-0", "Vodafone Park", "—", "Sunny", "W"],
@@ -28,60 +35,84 @@
                 ["W10", "TSL", "28.10.2017", "19:30", "Alanyaspor", "2-1", "Bahcesehir Okullari", "—", "Sunny", "W"],
                 ["W4", "UCL", "01.11.2017", "20:00", "Monaco", "1-1", "Vodafone Park", "39,346", "Cloud", "D"],
                 ["W11", "TSL", "05.11.2017", "19:32", "Goztepe", "3-1", "Bornova Ilce", "8,723", "Drizzle", "W"],
+                ["—", "Friendly", "11.11.2017", "15:00", "Astra Giurgiu", "1-1", "Vodafone Park", "—", "Cloud", "D"],
                 ["W12", "TSL", "17.11.2017", "20:00", "Akhisarspor", "0-0", "Vodafone Park", "—", "Cloud", "D"],
                 ["W5", "UCL", "21.11.2017", "20:00", "Porto", "1-1", "Vodafone Park", "36,919", "Cloud", "D"],
-                ["W13", "TSL", "25.11.2017", "17:00", "Yeni Malatya", "0-0", "Yeni Malatya", "—", "Cloud", "D"]
+                ["W13", "TSL", "25.11.2017", "17:00", "Yeni Malatya", "0-0", "Yeni Malatya", "—", "Cloud", "D"],
+                ["5th", "TSC", "28.11.2017", "14:30", "Manisaspor", "9-0", "Vodafone Park", "—", "Cloud", "W"],
             ];
         });
     </script>
 
     <body>
         <div ng-app="myApp" ng-controller="myCtrl">
-            <h2 class="animated fadeInDown delayed_05s" style="text-align: center; margin-bottom: 30px;">Besiktas JK 17/18 Season Fixture</h2>
-            <table class="table table-hover table-lg animated fadeIn delayed_05s" style="height: 500px; overflow-y: scroll;">
-                <thead>
-                <tr>
-                    <th><img src="svg/hash.svg" /></th>
-                    <th><img src="svg/award.svg" /></th>
-                    <th><img src="svg/calendar.svg" /></th>
-                    <th><img src="svg/clock.svg" /></th>
-                    <th><img src="svg/shield.svg" /></th>
-                    <th><img src="svg/clipboard.svg" /></th>
-                    <th><img src="svg/map.svg" /></th>
-                    <th><img src="svg/users.svg" /></th>
-                    <th><img src="svg/thermometer.svg" /></th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="match in matches">
-                    <td>{{ match[0] }}</td>
-                    <td>{{ match[1] }}</td>
-                    <td>{{ match[2] }}</td>
-                    <td>{{ match[3] }}</td>
-                    <td>{{ match[4] }}</td>
-                    <td>{{ match[5] }} &nbsp;
-                        <img src="svg/win.png" ng-if="match[9] == 'W'" />
-                        <img src="svg/lose.png" ng-if="match[9] == 'L'" />
-                        <img src="svg/draw.png" ng-if="match[9] == 'D'" />
-                    </td>
-                    <td>{{ match[6] }}</td>
-                    <td>{{ match[7] }}</td>
-                    <td>
-                        <img src="svg/sun.svg" ng-if="match[8] == 'Sunny'" />
-                        <img src="svg/cloud-rain.svg" ng-if="match[8] == 'Rainy'" />
-                        <img src="svg/cloud-drizzle.svg" ng-if="match[8] == 'Drizzle'" />
-                        <img src="svg/cloud.svg" ng-if="match[8] == 'Cloud'" />
-                    </td>
-                    <td>
-                        <img src="svg/eye.svg" class="view--btn" ng-click="" />
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <footer class="animated fadeIn delayed_05s">
+            <h2 class="animated fadeInDown delayed_025s" style="text-align: center; margin-bottom: 2em;">Besiktas JK 17/18 Season Fixture</h2>
+            <button class="scroll__down animated fadeIn delayed_05s">
+                <span class="scroll__mouse">
+                    <span class="scroll__wheel"></span>
+                </span>
+            </button>
+            <div style="padding: 0 50px 50px 50px">
+                <table class="table table-hover table-lg animated fadeIn delayed_05s" style="height: 500px; overflow-y: scroll;">
+                    <thead>
+                    <tr>
+                        <th>
+                            <span><img src="svg/hash.svg" /></span>
+                        </th>
+                        <th><span tooltip="Competition"><img src="svg/award.svg"/></span></th>
+                        <th><span tooltip="Date"><img src="svg/calendar.svg"/></span></th>
+                        <th><span tooltip="Time"><img src="svg/clock.svg"/></span></th>
+                        <th><span tooltip="Opponent"><img src="svg/shield.svg" /></span></th>
+                        <th><span tooltip="Result"><img src="svg/clipboard.svg" /></span></th>
+                        <th><span tooltip="Venue"><img src="svg/map.svg" /></span></th>
+                        <th><span tooltip="Attendance"><img src="svg/users.svg" /></span></th>
+                        <th><span tooltip="Weather Forecast"><img src="svg/thermometer.svg" /></span></th>
+                        <!--<th></th>-->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="match in matches">
+                        <td>{{ match[0] }}</td>
+                        <td>{{ match[1] }}</td>
+                        <td>{{ match[2] }}</td>
+                        <td>{{ match[3] }}</td>
+                        <td>{{ match[4] }}</td>
+                        <td>{{ match[5] }} &nbsp;
+                            <img src="svg/win.png" ng-if="match[9] == 'W'" />
+                            <img src="svg/lose.png" ng-if="match[9] == 'L'" />
+                            <img src="svg/draw.png" ng-if="match[9] == 'D'" />
+                        </td>
+                        <td>{{ match[6] }}</td>
+                        <td>{{ match[7] }}</td>
+                        <td>
+                            <img src="svg/sun.svg" ng-if="match[8] == 'Sunny'" />
+                            <img src="svg/cloud-rain.svg" ng-if="match[8] == 'Rainy'" />
+                            <img src="svg/cloud-drizzle.svg" ng-if="match[8] == 'Drizzle'" />
+                            <img src="svg/cloud.svg" ng-if="match[8] == 'Cloud'" />
+                        </td>
+                        <!--<td>
+                            <img src="svg/eye.svg" class="view--btn" ng-click="" />
+                        </td>-->
+                    </tr>
+                    </tbody>
+                </table>
+
+                <!--<div>
+                    <span class="span-btn" tooltip="I'm up above it!">Up</span>
+                    <span class="span-btn" tooltip="Slide to the left" flow="left">Left</span>
+                </div>-->
+            </div>
+            <footer class="animated fadeInUp delayed_075s">
                 <div class="footer--section">
                     <a class="dim no-underline color-inherit" href="http://suyalcinkaya.github.io">Made by @suyalcinkaya</a>
+                    <ul class="flex flex-row list-none mt-0 mb-0 pl-0">
+                        <li class="mt-0">
+                            <a class="dim no-underline color-inherit" href="https://github.com/suyalcinkaya">GitHub</a>
+                        </li>
+                        <li class="mt-0 ml-4">
+                            <a class="dim no-underline color-inherit" href="mailto:suyalcinkaya@live.com">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </footer>
         </div>
