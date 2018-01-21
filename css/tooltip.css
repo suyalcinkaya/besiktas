@@ -48,6 +48,7 @@
 [tooltip]:hover::before,
 [tooltip]:hover::after {
     display: block;
+    margin-bottom: 7px;
 }
 
 /* don't show empty tooltips */
@@ -168,4 +169,5 @@
     margin: .5em;
     display: inline-block;
     background: #dedede;
+    color: #fff;
 }

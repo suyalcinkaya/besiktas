@@ -3,7 +3,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Besiktas JK</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/formalize.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -11,42 +11,51 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script>
         var app = angular.module('myApp', []);
-        app.controller('myCtrl', function($scope) {
+        app.controller('myCtrl', function($scope){
             $scope.matches = [
-                ["—", "Friendly", "16.07.2017", "18:00", "Fortuna Sittard", "2-2", "—", "—", "Sunny", "D"],
-                ["—", "Friendly", "19.07.2017", "15:00", "Schalke 04", "2-3", "Zhuhai Sports Centre", "—", "Sunny", "L"],
-                ["—", "Friendly", "25.07.2017", "21:00", "Valladolid", "2-2", "Marbella", "—", "Sunny", "D"],
-                ["—", "Friendly", "27.07.2017", "21:00", "R. Betis", "1-4", "Marbella", "—", "Sunny", "L"],
-                ["—", "Friendly", "30.07.2017", "21:00", "R. Betis", "1-1", "Nuevo Mirador", "—", "Sunny", "D"],
-                ["Final", "TSC", "06.08.2017", "20:45", "A. Konyaspor", "1-2", "Samsun Yeni 19 Mayis", "—", "Sunny", "L"],
-                ["W1", "TSL", "13.08.2017", "21:45", "Antalyaspor", "2-0", "Vodafone Park", "—", "Sunny", "W"],
-                ["W2", "TSL", "18.08.2017", "21:45", "Kasimpasa", "2-2", "Recep Tayyip Erdogan", "—", "Sunny", "D"],
-                ["W3", "TSL", "26.08.2017", "19:45", "Bursaspor", "2-1", "Vodafone Park", "—", "Sunny", "W"],
-                ["—", "Friendly", "02.09.2017", "19:00", "Kayserispor", "1-1", "Vodafone Park", "—", "Sunny", "D"],
-                ["W4", "TSL", "09.09.2017", "17:00", "Karabukspor", "1-0", "Dr. Necmettin Seyhoglu", "—", "Sunny", "W"],
-                ["W1", "UCL", "13.09.2017", "21:45", "Porto", "3-1", "Estadio do Dragao ", "42,429", "Sunny", "W"],
-                ["W5", "TSL", "18.09.2017", "17:00", "Konyaspor", "2-0", "Vodafone Park", "—", "Sunny", "W"],
-                ["W6", "TSL", "23.09.2017", "19:30", "Fenerbahce", "1-2", "Sukru Saracoglu", "—", "Sunny", "L"],
-                ["W2", "UCL", "26.09.2017", "21:45", "RB Leipzig", "2-1", "Vodafone Park", "36,641", "Drizzle", "W"],
-                ["W7", "TSL", "01.10.2017", "19:30", "Trabzonspor", "2-2", "Vodafone Park", "—", "Drizzle", "D"],
-                ["W8", "TSL", "13.10.2017", "20:00", "Genclerbirligi", "1-2", "Ankara 19 Mayis", "—", "Sunny", "L"],
-                ["W3", "UCL", "17.10.2017", "21:45", "Monaco", "2-1", "Stade Louis II", "7,403", "Sunny", "W"],
-                ["W9", "TSL", "23.10.2017", "20:00", "Basaksehir", "1-1", "Vodafone Park", "—", "Sunny", "D"],
-                ["W10", "TSL", "28.10.2017", "19:30", "Alanyaspor", "2-1", "Bahcesehir Okullari", "—", "Sunny", "W"],
-                ["W4", "UCL", "01.11.2017", "20:00", "Monaco", "1-1", "Vodafone Park", "39,346", "Cloud", "D"],
-                ["W11", "TSL", "05.11.2017", "19:32", "Goztepe", "3-1", "Bornova Ilce", "8,723", "Drizzle", "W"],
-                ["—", "Friendly", "11.11.2017", "15:00", "Astra Giurgiu", "1-1", "Vodafone Park", "—", "Cloud", "D"],
-                ["W12", "TSL", "17.11.2017", "20:00", "Akhisarspor", "0-0", "Vodafone Park", "—", "Cloud", "D"],
-                ["W5", "UCL", "21.11.2017", "20:00", "Porto", "1-1", "Vodafone Park", "36,919", "Cloud", "D"],
-                ["W13", "TSL", "25.11.2017", "17:00", "Yeni Malatya", "0-0", "Yeni Malatya", "—", "Cloud", "D"],
-                ["5th", "TSC", "28.11.2017", "14:30", "Manisaspor", "9-0", "Vodafone Park", "—", "Cloud", "W"],
+                ["—", "Friendly", "16.07.2017", "18:00", "Fortuna Sittard", "2 - 2", "Nevzat Demir", "—", "Sunny", "D"],
+                ["—", "Friendly", "19.07.2017", "15:00", "Schalke 04", "2 - 3", "Zhuhai Sports Centre", "—", "Sunny", "L"],
+                ["—", "Friendly", "25.07.2017", "21:00", "Valladolid", "2 - 2", "Marbella", "—", "Sunny", "D"],
+                ["—", "Friendly", "27.07.2017", "21:00", "Las Palmas", "1 - 4", "Marbella", "—", "Sunny", "L"],
+                ["—", "Friendly", "30.07.2017", "21:00", "R. Betis", "1 - 1", "Nuevo Mirador", "—", "Sunny", "D"],
+                ["W1", "TSL", "13.08.2017", "21:45", "Antalyaspor", "2 - 0", "Vodafone Park", "—", "Sunny", "W"],
+                ["W2", "TSL", "18.08.2017", "21:45", "Kasimpasa", "2 - 2", "Recep Tayyip Erdogan", "—", "Sunny", "D"],
+                ["W3", "TSL", "26.08.2017", "19:45", "Bursaspor", "2 - 1", "Vodafone Park", "—", "Sunny", "W"],
+                ["—", "Friendly", "02.09.2017", "19:00", "Kayserispor", "1 - 1", "Vodafone Park", "—", "Sunny", "D"],
+                ["W4", "TSL", "09.09.2017", "17:00", "Karabukspor", "0 - 1", "Dr. Necmettin Seyhoglu", "—", "Sunny", "W"],
+                ["W1", "UCL", "13.09.2017", "21:45", "Porto", "1 - 3", "Estadio do Dragao ", "42,429", "Sunny", "W"],
+                ["W5", "TSL", "18.09.2017", "17:00", "Konyaspor", "2 - 0", "Vodafone Park", "—", "Sunny", "W"],
+                ["W6", "TSL", "23.09.2017", "19:30", "Fenerbahce", "2 - 1", "Sukru Saracoglu", "—", "Sunny", "L"],
+                ["W2", "UCL", "26.09.2017", "21:45", "RB Leipzig", "2 - 1", "Vodafone Park", "36,641", "Drizzle", "W"],
+                ["W7", "TSL", "01.10.2017", "19:30", "Trabzonspor", "2 - 2", "Vodafone Park", "—", "Drizzle", "D"],
+                ["W8", "TSL", "13.10.2017", "20:00", "Genclerbirligi", "2 - 1", "Ankara 19 Mayis", "—", "Sunny", "L"],
+                ["W3", "UCL", "17.10.2017", "21:45", "Monaco", "1 : 2", "Stade Louis II", "7,403", "Sunny", "W"],
+                ["W9", "TSL", "23.10.2017", "20:00", "Basaksehir", "1 - 1", "Vodafone Park", "—", "Sunny", "D"],
+                ["W10", "TSL", "28.10.2017", "19:30", "Alanyaspor", "1 - 2", "Bahcesehir Okullari", "—", "Sunny", "W"],
+                ["W4", "UCL", "01.11.2017", "20:00", "Monaco", "1 - 1", "Vodafone Park", "39,346", "Cloud", "D"],
+                ["W11", "TSL", "05.11.2017", "19:32", "Goztepe", "1 - 3", "Bornova Ilce", "8,723", "Drizzle", "W"],
+                ["—", "Friendly", "11.11.2017", "15:00", "Astra Giurgiu", "1 - 1", "Vodafone Park", "—", "Cloud", "D"],
+                ["W12", "TSL", "17.11.2017", "20:00", "Akhisarspor", "0 - 0", "Vodafone Park", "—", "Cloud", "D"],
+                ["W5", "UCL", "21.11.2017", "20:00", "Porto", "1 - 1", "Vodafone Park", "36,919", "Cloud", "D"],
+                ["W13", "TSL", "25.11.2017", "17:00", "Yeni Malatya", "0 - 0", "Yeni Malatya", "—", "Cloud", "D"],
+                ["5th Tour — 1st Leg", "TSC", "28.11.2017", "14:30", "Manisaspor", "9 - 0", "Vodafone Park", "0", "Cloud", "W"],
+                ["W14", "TSL", "02.12.2017", "19:30", "Galatasaray", "3 - 0", "Vodafone Park", "—", "Cloud", "W"],
+                ["W15", "TSL", "10.12.2017", "19:30", "Kayserispor", "1 - 1", "BB Kadir Has", "—", "Cloud", "D"],
+                ["5th Tour — 2nd Leg", "TSC", "12.12.2017", "21:00", "Manisaspor", "1 - 1", "Manisa 19 Mayis", "—", "Cloud", "D"],
+                ["W16", "TSL", "17.12.2017", "19:30", "Osmanlispor FK", "5 - 1", "Vodafone Park", "—", "Cloud", "W"],
+                ["W17", "TSL", "23.12.2017", "16:30", "Sivasspor", "2 - 1", "Yeni 4 Eylul", "—", "Cloud", "L"],
+                ["Last 16 — 1st Leg", "TSC", "28.12.2017", "20:30", "Osmanlispor FK", "4 - 1", "Vodafone Park", "—", "Cloud", "W"],
+                ["—", "Friendly", "09.01.2018", "18:00", "ADO Den Haag", "2 - 2", "—", "200", "Sunny", "D"],
+                ["—", "Friendly", "12.01.2018", "17:00", "Skenderbeu", "3 - 2", "—", "—", "Sunny", "W"],
+                ["Last 16 — 2nd Leg", "TSC", "17.01.2018", "20:30", "Osmanlispor FK", "2 - 1", "Osmanli", "—", "Cloud", "L"],
+                ["W18", "TSL", "21.01.2018", "19:00", "Antalyaspor", "1 - 2", "Antalya", "—", "Cloud", "W"],
             ];
         });
     </script>
 
     <body>
         <div ng-app="myApp" ng-controller="myCtrl">
-            <h2 class="animated fadeInDown delayed_025s" style="text-align: center; margin-bottom: 2em;">Besiktas JK 17/18 Season Fixture</h2>
+            <h1 class="animated fadeInDown delayed_025s" style="text-align: center; margin-bottom: 2em;">Besiktas JK 17/18 Season Fixture</h1>
             <button class="scroll__down animated fadeIn delayed_05s">
                 <span class="scroll__mouse">
                     <span class="scroll__wheel"></span>
@@ -57,16 +66,16 @@
                     <thead>
                     <tr>
                         <th>
-                            <span><img src="svg/hash.svg" /></span>
+                            <span><img src="img/hash.svg" /></span>
                         </th>
-                        <th><span tooltip="Competition"><img src="svg/award.svg"/></span></th>
-                        <th><span tooltip="Date"><img src="svg/calendar.svg"/></span></th>
-                        <th><span tooltip="Time"><img src="svg/clock.svg"/></span></th>
-                        <th><span tooltip="Opponent"><img src="svg/shield.svg" /></span></th>
-                        <th><span tooltip="Result"><img src="svg/clipboard.svg" /></span></th>
-                        <th><span tooltip="Venue"><img src="svg/map.svg" /></span></th>
-                        <th><span tooltip="Attendance"><img src="svg/users.svg" /></span></th>
-                        <th><span tooltip="Weather Forecast"><img src="svg/thermometer.svg" /></span></th>
+                        <th><span tooltip="Competition"><img src="img/award.svg"/></span></th>
+                        <th><span tooltip="Date"><img src="img/calendar.svg"/></span></th>
+                        <th><span tooltip="Time"><img src="img/clock.svg"/></span></th>
+                        <th><span tooltip="Opponent"><img src="img/shield.svg" /></span></th>
+                        <th><span tooltip="Result"><img src="img/clipboard.svg" /></span></th>
+                        <th><span tooltip="Venue"><img src="img/map.svg" /></span></th>
+                        <th><span tooltip="Attendance"><img src="img/users.svg" /></span></th>
+                        <th><span tooltip="Weather Forecast"><img src="img/thermometer.svg" /></span></th>
                         <!--<th></th>-->
                     </tr>
                     </thead>
@@ -78,29 +87,29 @@
                         <td>{{ match[3] }}</td>
                         <td>{{ match[4] }}</td>
                         <td>{{ match[5] }} &nbsp;
-                            <img src="svg/win.png" ng-if="match[9] == 'W'" />
-                            <img src="svg/lose.png" ng-if="match[9] == 'L'" />
-                            <img src="svg/draw.png" ng-if="match[9] == 'D'" />
+                            <img src="img/win.png" ng-if="match[9] == 'W'" />
+                            <img src="img/lose.png" ng-if="match[9] == 'L'" />
+                            <img src="img/draw.png" ng-if="match[9] == 'D'" />
                         </td>
                         <td>{{ match[6] }}</td>
                         <td>{{ match[7] }}</td>
                         <td>
-                            <img src="svg/sun.svg" ng-if="match[8] == 'Sunny'" />
-                            <img src="svg/cloud-rain.svg" ng-if="match[8] == 'Rainy'" />
-                            <img src="svg/cloud-drizzle.svg" ng-if="match[8] == 'Drizzle'" />
-                            <img src="svg/cloud.svg" ng-if="match[8] == 'Cloud'" />
+                            <img src="img/sun.svg" ng-if="match[8] == 'Sunny'" />
+                            <img src="img/cloud-rain.svg" ng-if="match[8] == 'Rainy'" />
+                            <img src="img/cloud-drizzle.svg" ng-if="match[8] == 'Drizzle'" />
+                            <img src="img/cloud.svg" ng-if="match[8] == 'Cloud'" />
                         </td>
                         <!--<td>
-                            <img src="svg/eye.svg" class="view--btn" ng-click="" />
+                            <img src="img/eye.img" class="view--btn" ng-click="" />
                         </td>-->
                     </tr>
                     </tbody>
                 </table>
 
-                <!--<div>
-                    <span class="span-btn" tooltip="I'm up above it!">Up</span>
-                    <span class="span-btn" tooltip="Slide to the left" flow="left">Left</span>
-                </div>-->
+                <div>
+                    <a class="span-btn" tooltip="I'm up above it!" href="">TSL Standings</a>
+                    <a class="span-btn" tooltip="Slide to the left" flow="left" href="">UCL Standings</a>
+                </div>
             </div>
             <footer class="animated fadeInUp delayed_075s">
                 <div class="footer--section">

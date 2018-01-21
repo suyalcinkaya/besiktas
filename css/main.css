@@ -1,8 +1,15 @@
 @font-face {
-  font-family: 'Vaud Display';
-  src: url('../fonts/VaudDisplay-Medium.ttf') format('truetype');
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.otf') format('truetype');
   font-style: normal;
   font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.otf') format('truetype');
+    font-style: normal;
+    font-weight: 900;
 }
 
 html {
@@ -15,8 +22,7 @@ html {
 }
 
 body {
-  font-family: 'Vaud Display', sans-serif;
-  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -29,7 +35,6 @@ body {
   max-width: 100%;
   background-color: transparent;
   border-collapse: collapse;
-  font-size: 14px;
 }
 
 .table thead th {
@@ -58,6 +63,7 @@ body {
   padding: 1.5rem;
   border-top: 1px solid #e9ecef;
   vertical-align: middle;
+    font-size: 14px;
 }
 
 .view--btn {
@@ -289,6 +295,3 @@ table thead, table tbody tr {
 span {
   display: inherit;
 }
-
-
-

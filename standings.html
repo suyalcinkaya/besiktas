@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Besiktas JK</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/formalize.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/tooltip.css">
+    <link rel="stylesheet" href="css/gridly-col-widths.min.css">
+    <link rel="stylesheet" href="css/gridly-core.min.css">
+    <link rel="stylesheet" href="css/gridly.min.css">
+    <script src="js/angular.min.js"></script>
+    <script>
+        var app = angular.module('standingsApp', []);
+        app.controller('standingsCtrl', function($scope){
+            $scope.UCLStandings = [
+                ["1", "Besiktas", "5", "3", "2", "0", "9", "4", "+5", "11"],
+                ["2", "Porto", "5", "2", "1", "2", "10", "8", "+2", "7"],
+                ["3", "RB Leipzig", "5", "2", "1", "2", "9", "9", "0", "7"],
+                ["4", "Monaco", "5", "0", "2", "3", "4", "11", "-7", "2"]
+            ];
+
+            $scope.TSLStandings = [
+                ["1", "Galatasaray", "14", "9", "2", "3", "29", "17", "+12", "29"],
+                ["2", "Medipol Basaksehir", "13", "8", "3", "2", "24", "15", "+9", "27"],
+                ["3", "Besiktas", "14", "7", "5", "2", "22", "12", "+10", "26"],
+                ["4", "Goztepe", "14", "7", "3", "4", "25", "21", "+4", "24"],
+                ["5", "Fenerbahce", "13", "6", "5", "2", "26", "17", "+9", "23"]
+            ];
+        });
+    </script>
+</head>
+<body>
+<div ng-app="standingsApp" ng-controller="standingsCtrl">
+    <div style="padding: 0 50px 50px 50px">
+        <h2 class="animated fadeInDown delayed_025s" style="text-align: center; margin-bottom: 1em;">UEFA Champions League Standings</h2>
+        <table class="table table-hover animated fadeIn delayed_05s">
+            <thead>
+            <tr>
+                <th><span tooltip="League Position">POS</span></th>
+                <th><span tooltip="Teams in Competition">TEAM</span></th>
+                <th><span tooltip="Games Played">PLD</span></th>
+                <th><span tooltip="Games Won">WON</span></th>
+                <th><span tooltip="Games Drawn">DRN</span></th>
+                <th><span tooltip="Games Lost">LST</span></th>
+                <th><span tooltip="Goals For">FOR</span></th>
+                <th><span tooltip="Goal Against">AG</span></th>
+                <th><span tooltip="Goal Difference">GD</span></th>
+                <th><span tooltip="Points">PTS</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="standing in UCLStandings">
+                <td>{{ standing[0] }}</td>
+                <td ng-style="standing[1] === 'Besiktas' && { 'font-weight':'bold'}">{{ standing[1] }}</td>
+                <td>{{ standing[2] }}</td>
+                <td>{{ standing[3] }}</td>
+                <td>{{ standing[4] }}</td>
+                <td>{{ standing[5] }}</td>
+                <td>{{ standing[6] }}</td>
+                <td>{{ standing[7] }}</td>
+                <td>{{ standing[8] }}</td>
+                <td>{{ standing[9] }}</td>
+                <!--<td>
+                    <img src="img/eye.img" class="view--btn" ng-click="" />
+                </td>-->
+            </tr>
+            </tbody>
+        </table>
+        <h2 class="animated fadeInDown delayed_025s" style="text-align: center; margin-bottom: 1em;">UEFA Champions League Standings</h2>
+        <table class="table table-hover animated fadeIn delayed_05s">
+            <thead>
+            <tr>
+                <th><span tooltip="League Position">POS</span></th>
+                <th><span tooltip="Teams in Competition">TEAM</span></th>
+                <th><span tooltip="Games Played">PLD</span></th>
+                <th><span tooltip="Games Won">WON</span></th>
+                <th><span tooltip="Games Drawn">DRN</span></th>
+                <th><span tooltip="Games Lost">LST</span></th>
+                <th><span tooltip="Goals For">FOR</span></th>
+                <th><span tooltip="Goal Against">AG</span></th>
+                <th><span tooltip="Goal Difference">GD</span></th>
+                <th><span tooltip="Points">PTS</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="standing in TSLStandings">
+                <td>{{ standing[0] }}</td>
+                <td ng-style="standing[1] === 'Besiktas' && { 'font-weight':'bold'}">{{ standing[1] }}</td>
+                <td>{{ standing[2] }}</td>
+                <td>{{ standing[3] }}</td>
+                <td>{{ standing[4] }}</td>
+                <td>{{ standing[5] }}</td>
+                <td>{{ standing[6] }}</td>
+                <td>{{ standing[7] }}</td>
+                <td>{{ standing[8] }}</td>
+                <td>{{ standing[9] }}</td>
+                <!--<td>
+                    <img src="img/eye.img" class="view--btn" ng-click="" />
+                </td>-->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
