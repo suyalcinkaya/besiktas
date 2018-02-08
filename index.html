@@ -9,10 +9,16 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/tooltip.css">
     <link rel="icon" href="img/bold.ico">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/uilang.js"></script>
+
+    <code>
+        clicking on ".more" toggles class "visible" on "#popover"
+    </code>
+
     <script>
-        var app = angular.module('myApp', []);
-        app.controller('myCtrl', function($scope){
+        var app = angular.module('besiktas', []);
+        app.controller('controller', function($scope){
             $scope.matches = [
                 ["—", "Friendly", "16.07.2017", "18:00", "Fortuna Sittard", "2 - 2", "Nevzat Demir", "—", "Sunny", "D", ""],
                 ["—", "Friendly", "19.07.2017", "15:00", "Schalke 04", "2 - 3", "Zhuhai Sports Centre", "—", "Sunny", "L", ""],
@@ -20,7 +26,7 @@
                 ["—", "Friendly", "27.07.2017", "21:00", "Las Palmas", "1 - 4", "Marbella", "—", "Sunny", "L", ""],
                 ["—", "Friendly", "30.07.2017", "21:00", "R. Betis", "1 - 1", "Nuevo Mirador", "—", "Sunny", "D", ""],
                 ["W1", "TSL", "13.08.2017", "21:45", "Antalyaspor", "2 - 0", "Vodafone Park", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/1/besiktas-2-0-antalyaspor-mac-ozeti"],
-                ["W2", "TSL", "18.08.2017", "21:45", "Kasimpasa", "2 - 2", "Recep Tayyip Erdogan", "—", "Sunny", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/3/besiktas-2-1-bursaspor-mac-ozeti"],
+                ["W2", "TSL", "18.08.2017", "21:45", "Kasimpasa", "2 - 2", "Recep Tayyip Erdogan", "—", "Sunny", "D", "http://tr.beinsports.com/lig/spor-toto-super-lig/ozet/2017-2018/2/kasimpasa-2-2-besiktas-mac-ozeti"],
                 ["W3", "TSL", "26.08.2017", "19:45", "Bursaspor", "2 - 1", "Vodafone Park", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/3/besiktas-2-1-bursaspor-mac-ozeti"],
                 ["—", "Friendly", "02.09.2017", "19:00", "Kayserispor", "1 - 1", "Vodafone Park", "—", "Sunny", "D", ""],
                 ["W4", "TSL", "09.09.2017", "17:00", "Karabukspor", "0 - 1", "Dr. Necmettin Seyhoglu", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/4/kardemir-karabukspor-0-1-besiktas-mac-ozeti"],
@@ -54,118 +60,159 @@
                 ["W19", "TSL", "26.01.2018", "20:00", "Kasimpasa", "2 - 1", "Vodafone Park", "—", "Cloud", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/19/besiktas-2-1-kasimpasa-mac-ozeti"],
                 ["Quarter — 1st Leg", "TSC", "30.01.2018", "20:30", "Genclerbirligi", "3 - 1", "Vodafone Park", "—", "Cloud", "W", "https://www.aspor.com.tr/turkiye-kupasi/kupatv/besiktas-3-genclerbirligi-1-ozet/mac-ozeti-izle/2704493"],
                 ["W20", "TSL", "02.02.2018", "20:00", "Bursaspor", "2 - 2", "Bursa BB", "27.109", "Cloud", "D", "http://tr.beinsports.com/lig/spor-toto-super-lig/ozet/2017-2018/20/bursaspor-2-2-besiktas-mac-ozeti"],
+                ["Quarter — 2nd Leg", "TSC", "06.02.2018", "20:30", "Genclerbirligi", "0 - 1", "Ankara 19 Mayis", "—", "Cloud", "W", "https://www.aspor.com.tr/webtv/ziraatturkiyekupasi/genclerbirligi-0-besiktas-1-ozet"]
             ];
         });
     </script>
 
     <body>
-        <div class="jQqHUs" ng-app="myApp" ng-controller="myCtrl">
-            <div class="TPLqI hoIHyY">
-                <p class="YnFbz animated fadeInDown delayed_05s">Besiktas JK 17/18 Season Fixture</p>
-                <div class="dqYHlU kJuSkM animated fadeInDown delayed_025s">
-                    <a class="iFSVFt iarTmz" href="standings.html" target="_blank">Standings</a>
-                    <a class="eIpWdY eoYFug" >Github</a>
-                </div>
-            </div>
-
-            <div>
-                <div class="bcxKmx ircNbz">
-                    <div class="bJRjik">
-                        <div class="iSNGhk jVMqoU kpwYUV">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" color="#95a1ac" data-reactid="30"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <div ng-app="besiktas" ng-controller="controller">
+            <div class="AXtUg isnHCr animated fadeIn delayed_025s">
+                <div class="jQqHUs">
+                    <div class="bUZGRr iHZvIS iSNGhk">
+                        <a class="gMWfKe eyLfWl hxhtjI" href="/">
+                            <img src="img/logo.png" style="height: 48px;" />
+                            <span>Besiktas JK</span>
+                        </a>
+                        <a class="eIpWdY dtSnOS" href="https://github.com/feathericons/feather/releases" target="_blank">v4.5.0</a>
+                        <div class="LbkC"></div>
+                        <div class="cXCHNs kSkfX">
+                            <a class="cSTfEv jqXXaj kSkfX" href="https://twitter.com/intent/tweet?text=Besiktas%20JK%20—%20Simply%20beautiful%20fixture%20for%202017%20-%202018%20season%20by%20%40konukilit%20https%3A%2F%2Fsuyalcinkaya.github.io/besiktas" target="_blank">
+                                <img class="mr-4" src="img/message-circle.svg" />
+                                <span>Tweet</span>
+                            </a>
+                            <ul id="nav" class="cSTfEv jqXXaj">
+                                <li class="kSkfX">
+                                    <a href=# class="cSTfEv kSkfX more">
+                                        <img class="mr-4" src="img/dollar-sign.svg" />
+                                        <span>Donate</span>
+                                    </a>
+                                    <ul id="popover">
+                                        <li class="mb-2">
+                                            <img src="img/logo.png">
+                                        </li>
+                                        <li>
+                                            <span>1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <a class="cSTfEv jqXXaj kSkfX" href="mailto:suyalcinkaya@live.com">
+                                <img class="mr-4" src="img/mail.svg" />
+                                <span>Contact</span>
+                            </a>
                         </div>
                     </div>
-                    <input type="search" class="search-input" ng-model="searchQuery" value="" placeholder="Search">
                 </div>
-
-                <div class="TPLqI bEIiCg fUxvfD rwsjb ircNbz" ng-if="filtered.length == 0">
-                    <p class="PKBkC igsOsg jQGgBT jobfBC">No results found for "{{searchQuery}}"</p>
-                </div>
-
-                <table class="table table-hover table-lg animated fadeIn delayed_05s">
-                    <thead>
-                    <tr ng-if="filtered.length > 0">
-                        <th><span><img src="img/hash.svg" /></span></th>
-                        <th><span tooltip="Competition"><img src="img/star.svg"/></span></th>
-                        <th><span tooltip="Date"><img src="img/calendar.svg"/></span></th>
-                        <th><span tooltip="Time"><img src="img/clock.svg"/></span></th>
-                        <th><span tooltip="Opponent"><img src="img/crosshair.svg" /></span></th>
-                        <th><span tooltip="Result"><img src="img/more-horizontal.svg" /></span></th>
-                        <th><span tooltip="Venue"><img src="img/map.svg" /></span></th>
-                        <th><span tooltip="Attendance"><img src="img/users.svg" /></span></th>
-                        <th><span tooltip="Weather Forecast"><img src="img/thermometer.svg" /></span></th>
-                        <th><span tooltip="Highlights"><img src="img/tv.svg" /></span></th>
-                        <!--<th></th>-->
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="match in filtered = (matches | filter: searchQuery)">
-                        <td>{{ match[0] }}</td>
-                        <td>{{ match[1] }}</td>
-                        <td>{{ match[2] }}</td>
-                        <td>{{ match[3] }}</td>
-                        <td>{{ match[4] }}</td>
-                        <td>
-                            <div class="flex">
-                                <span class="mr-10">{{ match[5] }}</span>
-                                <span class="circle circle_win mt-1" ng-if="match[9] == 'W'"></span>
-                                <span class="circle circle_lose mt-1" ng-if="match[9] == 'L'"></span>
-                                <span class="circle circle_draw mt-1" ng-if="match[9] == 'D'"></span>
-                            </div>
-                        </td>
-                        <td>{{ match[6] }}</td>
-                        <td>{{ match[7] }}</td>
-                        <td>
-                            <img src="img/sun.svg" ng-if="match[8] == 'Sunny'" />
-                            <img src="img/cloud-rain.svg" ng-if="match[8] == 'Rainy'" />
-                            <img src="img/cloud-drizzle.svg" ng-if="match[8] == 'Drizzle'" />
-                            <img src="img/cloud.svg" ng-if="match[8] == 'Cloud'" />
-                        </td>
-                        <td>
-                            <a href="{{ match[10] }}" target="_blank" ng-if="match[10] != ''">
-                                <img src="img/link.svg" />
-                            </a>
-                            <span ng-if="match[10] == ''">—</span>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-
-
-                <!--<div class="section-title">What I can do for you</div>
-
-
-
-                <a href="index.html">
-                    <div class="bubble">
-                        <span class="bubble_badge">Available for hire</span>
-                        <span class="bubble_text">Either for an hour or for a whole project. Find out more</span>
+            </div>
+            <div class="jQqHUs mb-2">
+                <div class="TPLqI hoIHyY">
+                    <p class="YnFbz animated fadeInDown delayed_05s">Besiktas JK 17/18 Season Fixture</p>
+                    <div class="dqYHlU kJuSkM animated fadeInDown delayed_05s">
+                        <a class="iFSVFt iarTmz" href="standings.html">Standings</a>
+                        <a class="eIpWdY eoYFug" href="https://github.com/suyalcinkaya/besiktas" target="_blank">Github</a>
                     </div>
-                </a>-->
+                </div>
 
+                <div class="animated fadeIn delayed_05s">
+                    <div class="bcxKmx ircNbz">
+                        <div class="bJRjik">
+                            <div class="iSNGhk jVMqoU kpwYUV">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" color="#95a1ac" data-reactid="30"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            </div>
+                        </div>
+                        <input type="text" class="cGJiID gdrtsO hNtHop" ng-model="searchQuery" value="" placeholder="Search">
+                    </div>
+
+                    <div class="TPLqI bEIiCg fUxvfD rwsjb ircNbz" ng-if="filtered.length == 0">
+                        <p class="PKBkC igsOsg jQGgBT jobfBC">No results found for "{{searchQuery}}"</p>
+                    </div>
+
+                    <table class="table table-hover table-lg">
+                        <thead>
+                        <tr ng-if="filtered.length > 0">
+                            <th><span><img src="img/hash.svg" /></span></th>
+                            <th><span tooltip="Competition"><img src="img/star.svg"/></span></th>
+                            <th><span tooltip="Date"><img src="img/calendar.svg"/></span></th>
+                            <th><span tooltip="Time"><img src="img/clock.svg"/></span></th>
+                            <th><span tooltip="Opponent"><img src="img/crosshair.svg" /></span></th>
+                            <th><span tooltip="Result"><img src="img/more-horizontal.svg" /></span></th>
+                            <th><span tooltip="Venue"><img src="img/map.svg" /></span></th>
+                            <th><span tooltip="Attendance"><img src="img/users.svg" /></span></th>
+                            <th><span tooltip="Weather Forecast"><img src="img/thermometer.svg" /></span></th>
+                            <th><span tooltip="Highlights"><img src="img/tv.svg" /></span></th>
+                            <!--<th></th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="match in filtered = (matches | filter: searchQuery)">
+                            <td>{{ match[0] }}</td>
+                            <td>{{ match[1] }}</td>
+                            <td>{{ match[2] }}</td>
+                            <td>{{ match[3] }}</td>
+                            <td>{{ match[4] }}</td>
+                            <td>
+                                <div class="flex">
+                                    <span class="mr-10">{{ match[5] }}</span>
+                                    <span class="circle circle_win mt-1" ng-if="match[9] == 'W'"></span>
+                                    <span class="circle circle_lose mt-1" ng-if="match[9] == 'L'"></span>
+                                    <span class="circle circle_draw mt-1" ng-if="match[9] == 'D'"></span>
+                                </div>
+                            </td>
+                            <td>{{ match[6] }}</td>
+                            <td>{{ match[7] }}</td>
+                            <td>
+                                <img src="img/sun.svg" ng-if="match[8] == 'Sunny'" />
+                                <img src="img/cloud-rain.svg" ng-if="match[8] == 'Rainy'" />
+                                <img src="img/cloud-drizzle.svg" ng-if="match[8] == 'Drizzle'" />
+                                <img src="img/cloud.svg" ng-if="match[8] == 'Cloud'" />
+                            </td>
+                            <td>
+                                <a href="{{ match[10] }}" target="_blank" ng-if="match[10] != ''">
+                                    <img src="img/link.svg" />
+                                </a>
+                                <span ng-if="match[10] == ''">—</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+                    <!--<div class="section-title">What I can do for you</div>
+
+
+
+                    <a href="index.html">
+                        <div class="bubble">
+                            <span class="bubble_badge">Available for hire</span>
+                            <span class="bubble_text">Either for an hour or for a whole project. Find out more</span>
+                        </div>
+                    </a>-->
+
+                </div>
             </div>
+            <footer class="animated fadeInUp delayed_075s">
+                <div class="footer--section">
+                    <a class="dim no-underline color-inherit" href="http://suyalcinkaya.github.io">
+                        <img src="img/zap.svg" />
+                        <span>Made by @suyalcinkaya</span>
+                    </a>
+                    <ul class="flex flex-row list-none mt-0 mb-0 pl-0">
+                        <li class="mt-0">
+                            <a class="dim no-underline color-inherit" href="https://github.com/suyalcinkaya">
+                                <img src="img/github.svg" />
+                                <span>GitHub</span>
+                            </a>
+                        </li>
+                        <li class="mt-0 ml-4">
+                            <a class="dim no-underline color-inherit" href="mailto:suyalcinkaya@live.com">
+                                <img src="img/mail.svg" />
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
         </div>
-        <footer class="animated fadeInUp delayed_075s">
-            <div class="footer--section">
-                <a class="dim no-underline color-inherit" href="http://suyalcinkaya.github.io">
-                    <img src="img/zap.svg" />
-                    <span>Made by @suyalcinkaya</span>
-                </a>
-                <ul class="flex flex-row list-none mt-0 mb-0 pl-0">
-                    <li class="mt-0">
-                        <a class="dim no-underline color-inherit" href="https://github.com/suyalcinkaya">
-                            <img src="img/github.svg" />
-                            <span>GitHub</span>
-                        </a>
-                    </li>
-                    <li class="mt-0 ml-4">
-                        <a class="dim no-underline color-inherit" href="mailto:suyalcinkaya@live.com">
-                            <img src="img/mail.svg" />
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
     </body>
 </html>
