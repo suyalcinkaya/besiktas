@@ -19,113 +19,182 @@
         var app = angular.module('standingsApp', []);
         app.controller('standingsCtrl', function($scope){
             $scope.UCLStandings = [
-                ["1", "Besiktas", "5", "3", "2", "0", "9", "4", "+5", "11", "W", "W", "W", "D", "D", "W"],
-                ["2", "Porto", "5", "2", "1", "2", "10", "8", "+2", "7", "L", "W", "L", "W", "D", "W"],
-                ["3", "RB Leipzig", "5", "2", "1", "2", "9", "9", "0", "7", "D", "L", "W", "L", "W", "L"],
-                ["4", "Monaco", "5", "0", "2", "3", "4", "11", "-7", "2", "D", "L", "L", "D", "L", "L"]
+                ["1", "Besiktas", "6", "4", "2", "0", "11", "5", "+6", "14", "W", "W", "W", "D", "D", "W"],
+                ["2", "Porto", "6", "3", "1", "2", "15", "10", "+5", "10", "L", "W", "L", "W", "D", "W"],
+                ["3", "RB Leipzig", "6", "2", "1", "3", "10", "11", "-1", "7", "D", "L", "W", "L", "W", "L"],
+                ["4", "Monaco", "6", "0", "2", "4", "6", "16", "-10", "2", "D", "L", "L", "D", "L", "L"]
             ];
 
             $scope.TSLStandings = [
-                ["1", "Medipol Basaksehir", "20", "13", "4", "3", "40", "19", "+21", "43", "W", "W", "W", "W", "D"],
-                ["2", "Galatasaray", "20", "13", "2", "5", "43", "25", "+18", "41", "L", "W", "W", "W", "L"],
-                ["3", "Fenerbahce", "20", "10", "8", "2", "39", "24", "+15", "38", "W", "D", "W", "D", "D"],
-                ["4", "Besiktas", "20", "10", "7", "3", "35", "20", "+15", "37", "W", "L", "W", "W", "D"]
+                ["1", "Galatasaray", "20", "14", "2", "5", "46", "25", "+21", "44", "W", "W", "W", "L", "W"],
+                ["2", "Medipol Basaksehir", "20", "13", "4", "4", "40", "21", "+19", "43", "W", "W", "W", "D", "L"],
+                ["3", "Fenerbahce", "20", "11", "8", "2", "41", "24", "+17", "41", "D", "W", "D", "D", "W"],
+                ["4", "Besiktas", "20", "11", "7", "3", "40", "20", "+20", "40", "L", "W", "W", "D", "W"]
             ];
         });
     </script>
 </head>
 <body>
 <div ng-app="standingsApp" ng-controller="standingsCtrl">
-    <div class="flex flex-column align-center pb-5" style="padding: 0 50px 50px 50px">
-        <span class="header_text animated fadeInDown delayed_025s" style="text-align: center; margin-bottom: 1em;">—  Turkish Super League  —</span>
-        <table class="table standings-table table-hover animated fadeIn delayed_05s mb-5">
-            <thead>
-            <tr>
-                <th><span tooltip="League Position">POS</span></th>
-                <th><span tooltip="Teams in Competition">TEAM</span></th>
-                <th><span tooltip="Games Played">PLD</span></th>
-                <th><span tooltip="Games Won">WON</span></th>
-                <th><span tooltip="Games Drawn">DRN</span></th>
-                <th><span tooltip="Games Lost">LST</span></th>
-                <th><span tooltip="Goals For">FOR</span></th>
-                <th><span tooltip="Goal Against">AG</span></th>
-                <th><span tooltip="Goal Difference">GD</span></th>
-                <th><span tooltip="Points">PTS</span></th>
-                <th><span tooltip="Points">FORM</span></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="standing in TSLStandings">
-                <td>{{ standing[0] }}</td>
-                <td ng-style="standing[1] === 'Besiktas' && { 'font-weight':'bold'}">{{ standing[1] }}</td>
-                <td>{{ standing[2] }}</td>
-                <td>{{ standing[3] }}</td>
-                <td>{{ standing[4] }}</td>
-                <td>{{ standing[5] }}</td>
-                <td>{{ standing[6] }}</td>
-                <td>{{ standing[7] }}</td>
-                <td>{{ standing[8] }}</td>
-                <td>{{ standing[9] }}</td>
-                <td>
-                    <div class="flex">
-                        <span tooltip="{{standing[10]}}" class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[10] == 'W', 'circle_lose': standing[10] == 'L', 'circle_draw': standing[10] == 'D' }"></span>
-                        <span tooltip="{{standing[11]}}" class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[11] == 'W', 'circle_lose': standing[11] == 'L', 'circle_draw': standing[11] == 'D' }"></span>
-                        <span tooltip="{{standing[12]}}" class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[12] == 'W', 'circle_lose': standing[12] == 'L', 'circle_draw': standing[12] == 'D' }"></span>
-                        <span tooltip="{{standing[13]}}" class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[13] == 'W', 'circle_lose': standing[13] == 'L', 'circle_draw': standing[13] == 'D' }"></span>
-                        <span tooltip="{{standing[14]}}" class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[14] == 'W', 'circle_lose': standing[14] == 'L', 'circle_draw': standing[14] == 'D' }"></span>
+    <div class="AXtUg isnHCr animated fadeIn delayed_025s">
+        <div class="jQqHUs">
+            <div class="bUZGRr iHZvIS iSNGhk">
+                <a class="gMWfKe eyLfWl hxhtjI" href="index.html">
+                    <img src="img/logo.png" style="height: 48px;" />
+                    <span style="font-weight: 500;">Besiktas JK</span>
+                </a>
+                <a class="eIpWdY dtSnOS">v1.0.0</a>
+                <div class="LbkC"></div>
+                <div class="cXCHNs kSkfX">
+                    <a class="cSTfEv jqXXaj kSkfX" href="https://twitter.com/intent/tweet?text=Besiktas%20JK%20—%20Simply%20beautiful%20fixture%20for%202017%20-%202018%20season%20by%20%40konukilit%20https%3A%2F%2Fsuyalcinkaya.github.io/besiktas" target="_blank">
+                        <img class="mr-4" src="img/message-circle.svg" />
+                        <span>Tweet</span>
+                    </a>
+                    <a class="cSTfEv jqXXaj kSkfX" href="donate.html">
+                        <img class="mr-4" src="img/dollar-sign.svg" />
+                        <span>Donate</span>
+                    </a>
+                    <a class="cSTfEv jqXXaj kSkfX" href="mailto:suyalcinkaya@live.com">
+                        <img class="mr-4" src="img/mail.svg" />
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jQqHUs mb-2">
+        <div>
+            <div class="TPLqI hoIHyY pb-1">
+                <p class="YnFbz animated fadeInDown delayed_025s">Turkish Super League</p>
+            </div>
+
+            <div class="animated fadeIn delayed_05s">
+                <table class="table standings-table table-hover animated fadeIn delayed_05s mb-5">
+                    <thead>
+                    <tr>
+                        <th><span>POS</span></th>
+                        <th><span>TEAM</span></th>
+                        <th><span>PLD</span></th>
+                        <th><span>WON</span></th>
+                        <th><span>DRN</span></th>
+                        <th><span>LST</span></th>
+                        <th><span>FOR</span></th>
+                        <th><span>AG</span></th>
+                        <th><span>GD</span></th>
+                        <th><span>PTS</span></th>
+                        <th><span>FORM</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="standing in filtered = (TSLStandings | filter: searchQuery)">
+                        <td>{{ standing[0] }}</td>
+                        <td ng-style="standing[1] === 'Besiktas' && { 'font-weight':'bold'}">{{ standing[1] }}</td>
+                        <td>{{ standing[2] }}</td>
+                        <td>{{ standing[3] }}</td>
+                        <td>{{ standing[4] }}</td>
+                        <td>{{ standing[5] }}</td>
+                        <td>{{ standing[6] }}</td>
+                        <td>{{ standing[7] }}</td>
+                        <td>{{ standing[8] }}</td>
+                        <td>{{ standing[9] }}</td>
+                        <td>
+                            <div class="flex">
+                                <span tooltip="{{standing[10]}}" class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[10] == 'W', 'circle_lose': standing[10] == 'L', 'circle_draw': standing[10] == 'D' }"></span>
+                                <span tooltip="{{standing[11]}}" class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[11] == 'W', 'circle_lose': standing[11] == 'L', 'circle_draw': standing[11] == 'D' }"></span>
+                                <span tooltip="{{standing[12]}}" class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[12] == 'W', 'circle_lose': standing[12] == 'L', 'circle_draw': standing[12] == 'D' }"></span>
+                                <span tooltip="{{standing[13]}}" class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[13] == 'W', 'circle_lose': standing[13] == 'L', 'circle_draw': standing[13] == 'D' }"></span>
+                                <span tooltip="{{standing[14]}}" class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[14] == 'W', 'circle_lose': standing[14] == 'L', 'circle_draw': standing[14] == 'D' }"></span>
+                            </div>
+                        </td>
+                        <!--<td>
+                            <img src="img/eye.img" class="view--btn" ng-click="" />
+                        </td>-->
+                    </tr>
+                    </tbody>
+                </table>
+
+                <!--<div class="section-title">What I can do for you</div>
+
+
+
+                <a href="index.html">
+                    <div class="bubble">
+                        <span class="bubble_badge">Available for hire</span>
+                        <span class="bubble_text">Either for an hour or for a whole project. Find out more</span>
                     </div>
-                </td>
-                <!--<td>
-                    <img src="img/eye.img" class="view--btn" ng-click="" />
-                </td>-->
-            </tr>
-            </tbody>
-        </table>
-        <span class="header_text animated fadeInDown delayed_025s" style="text-align: center; margin-bottom: 1em;">—  European Champions Cup  —</span>
-        <table class="table standings-table table-hover animated fadeIn delayed_05s">
-            <thead>
-            <tr>
-                <th><span tooltip="League Position">POS</span></th>
-                <th><span tooltip="Teams in Competition">TEAM</span></th>
-                <th><span tooltip="Games Played">PLD</span></th>
-                <th><span tooltip="Games Won">WON</span></th>
-                <th><span tooltip="Games Drawn">DRN</span></th>
-                <th><span tooltip="Games Lost">LST</span></th>
-                <th><span tooltip="Goals For">FOR</span></th>
-                <th><span tooltip="Goal Against">AG</span></th>
-                <th><span tooltip="Goal Difference">GD</span></th>
-                <th><span tooltip="Points">PTS</span></th>
-                <th><span tooltip="Points">FORM</span></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="standing in UCLStandings">
-                <td>{{ standing[0] }}</td>
-                <td ng-style="standing[1] === 'Besiktas' && { 'font-weight':'bold'}">{{ standing[1] }}</td>
-                <td>{{ standing[2] }}</td>
-                <td>{{ standing[3] }}</td>
-                <td>{{ standing[4] }}</td>
-                <td>{{ standing[5] }}</td>
-                <td>{{ standing[6] }}</td>
-                <td>{{ standing[7] }}</td>
-                <td>{{ standing[8] }}</td>
-                <td>{{ standing[9] }}</td>
-                <td>
-                    <div class="flex">
-                        <span class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[10] == 'W', 'circle_lose': standing[10] == 'L', 'circle_draw': standing[10] == 'D' }"></span>
-                        <span class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[11] == 'W', 'circle_lose': standing[11] == 'L', 'circle_draw': standing[11] == 'D' }"></span>
-                        <span class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[12] == 'W', 'circle_lose': standing[12] == 'L', 'circle_draw': standing[12] == 'D' }"></span>
-                        <span class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[13] == 'W', 'circle_lose': standing[13] == 'L', 'circle_draw': standing[13] == 'D' }"></span>
-                        <span class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[14] == 'W', 'circle_lose': standing[14] == 'L', 'circle_draw': standing[14] == 'D' }"></span>
+                </a>-->
+
+            </div>
+        </div>
+
+        <div>
+            <div class="TPLqI hoIHyY pb-1">
+                <p class="YnFbz animated fadeInDown delayed_075s">European Champions Cup</p>
+            </div>
+
+            <div class="animated fadeIn delayed_05s">
+                <table class="table standings-table table-hover animated fadeIn delayed_05s mb-5">
+                    <thead>
+                    <tr>
+                        <th><span>POS</span></th>
+                        <th><span>TEAM</span></th>
+                        <th><span>PLD</span></th>
+                        <th><span>WON</span></th>
+                        <th><span>DRN</span></th>
+                        <th><span>LST</span></th>
+                        <th><span>FOR</span></th>
+                        <th><span>AG</span></th>
+                        <th><span>GD</span></th>
+                        <th><span>PTS</span></th>
+                        <th><span>FORM</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="standing in filtered = (UCLStandings | filter: searchQuery)">
+                        <td>{{ standing[0] }}</td>
+                        <td ng-style="standing[1] === 'Besiktas' && { 'font-weight':'bold'}">{{ standing[1] }}</td>
+                        <td>{{ standing[2] }}</td>
+                        <td>{{ standing[3] }}</td>
+                        <td>{{ standing[4] }}</td>
+                        <td>{{ standing[5] }}</td>
+                        <td>{{ standing[6] }}</td>
+                        <td>{{ standing[7] }}</td>
+                        <td>{{ standing[8] }}</td>
+                        <td>{{ standing[9] }}</td>
+                        <td>
+                            <div class="flex">
+                                <span class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[10] == 'W', 'circle_lose': standing[10] == 'L', 'circle_draw': standing[10] == 'D' }"></span>
+                                <span class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[11] == 'W', 'circle_lose': standing[11] == 'L', 'circle_draw': standing[11] == 'D' }"></span>
+                                <span class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[12] == 'W', 'circle_lose': standing[12] == 'L', 'circle_draw': standing[12] == 'D' }"></span>
+                                <span class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[13] == 'W', 'circle_lose': standing[13] == 'L', 'circle_draw': standing[13] == 'D' }"></span>
+                                <span class="roller mt-1 mr-4" ng-class="{ 'circle_win': standing[14] == 'W', 'circle_lose': standing[14] == 'L', 'circle_draw': standing[14] == 'D' }"></span>
+                            </div>
+                        </td>
+                        <!--<td>
+                            <img src="img/eye.img" class="view--btn" ng-click="" />
+                        </td>
+                                <!--<td>
+                                    <img src="img/eye.img" class="view--btn" ng-click="" />
+                                </td>-->
+                    </tr>
+                    </tbody>
+                </table>
+
+                <!--<div class="section-title">What I can do for you</div>
+
+
+
+                <a href="index.html">
+                    <div class="bubble">
+                        <span class="bubble_badge">Available for hire</span>
+                        <span class="bubble_text">Either for an hour or for a whole project. Find out more</span>
                     </div>
-                </td>
-                <!--<td>
-                    <img src="img/eye.img" class="view--btn" ng-click="" />
-                </td>-->
-            </tr>
-            </tbody>
-        </table>
+                </a>-->
+
+            </div>
+        </div>
     </div>
 </div>
 </body>
+
 </html>

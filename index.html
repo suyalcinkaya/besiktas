@@ -1,102 +1,87 @@
 <html lang="en">
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Besiktas JK</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/formalize.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/tooltip.css">
-    <link rel="icon" href="img/bold.ico">
-    <script src="js/angular.min.js"></script>
-    <script src="js/uilang.js"></script>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Besiktas JK</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/formalize.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/tooltip.css">
+        <script src="js/angular.min.js"></script>
 
-    <code>
-        clicking on ".more" toggles class "visible" on "#popover"
-    </code>
-
-    <script>
-        var app = angular.module('besiktas', []);
-        app.controller('controller', function($scope){
-            $scope.matches = [
-                ["—", "Friendly", "16.07.2017", "18:00", "Fortuna Sittard", "2 - 2", "Nevzat Demir", "—", "Sunny", "D", ""],
-                ["—", "Friendly", "19.07.2017", "15:00", "Schalke 04", "2 - 3", "Zhuhai Sports Centre", "—", "Sunny", "L", ""],
-                ["—", "Friendly", "25.07.2017", "21:00", "Valladolid", "2 - 2", "Marbella", "—", "Sunny", "D", ""],
-                ["—", "Friendly", "27.07.2017", "21:00", "Las Palmas", "1 - 4", "Marbella", "—", "Sunny", "L", ""],
-                ["—", "Friendly", "30.07.2017", "21:00", "R. Betis", "1 - 1", "Nuevo Mirador", "—", "Sunny", "D", ""],
-                ["W1", "TSL", "13.08.2017", "21:45", "Antalyaspor", "2 - 0", "Vodafone Park", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/1/besiktas-2-0-antalyaspor-mac-ozeti"],
-                ["W2", "TSL", "18.08.2017", "21:45", "Kasimpasa", "2 - 2", "Recep Tayyip Erdogan", "—", "Sunny", "D", "http://tr.beinsports.com/lig/spor-toto-super-lig/ozet/2017-2018/2/kasimpasa-2-2-besiktas-mac-ozeti"],
-                ["W3", "TSL", "26.08.2017", "19:45", "Bursaspor", "2 - 1", "Vodafone Park", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/3/besiktas-2-1-bursaspor-mac-ozeti"],
-                ["—", "Friendly", "02.09.2017", "19:00", "Kayserispor", "1 - 1", "Vodafone Park", "—", "Sunny", "D", ""],
-                ["W4", "TSL", "09.09.2017", "17:00", "Karabukspor", "0 - 1", "Dr. Necmettin Seyhoglu", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/4/kardemir-karabukspor-0-1-besiktas-mac-ozeti"],
-                ["W1", "UCL", "13.09.2017", "21:45", "Porto", "1 - 3", "Estadio do Dragao ", "42,429", "Sunny", "W", "https://www.youtube.com/watch?v=fj-BWj-NcHo"],
-                ["W5", "TSL", "18.09.2017", "17:00", "Konyaspor", "2 - 0", "Vodafone Park", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/5/besiktas-2-0-konyaspor-mac-ozeti"],
-                ["W6", "TSL", "23.09.2017", "19:30", "Fenerbahce", "2 - 1", "Sukru Saracoglu", "—", "Sunny", "L", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/6/fenerbahce-2-1-besiktas-mac-ozeti"],
-                ["W2", "UCL", "26.09.2017", "21:45", "RB Leipzig", "2 - 1", "Vodafone Park", "36,641", "Drizzle", "W", "https://www.youtube.com/watch?v=c0lJLXg9ztU"],
-                ["W7", "TSL", "01.10.2017", "19:30", "Trabzonspor", "2 - 2", "Vodafone Park", "—", "Drizzle", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/7/besiktas-2-2-trabzonspor-mac-ozeti"],
-                ["W8", "TSL", "13.10.2017", "20:00", "Genclerbirligi", "2 - 1", "Ankara 19 Mayis", "—", "Sunny", "L", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/8/genclerbirligi-2-1-besiktas-mac-ozeti"],
-                ["W3", "UCL", "17.10.2017", "21:45", "Monaco", "1 : 2", "Stade Louis II", "7,403", "Sunny", "W", "https://www.youtube.com/watch?v=C-U2UzjA8qs"],
-                ["W9", "TSL", "23.10.2017", "20:00", "Basaksehir", "1 - 1", "Vodafone Park", "—", "Sunny", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/9/besiktas-1-1-istanbul-basaksehir-mac-ozeti"],
-                ["W10", "TSL", "28.10.2017", "19:30", "Alanyaspor", "1 - 2", "Bahcesehir Okullari", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/10/alanyaspor-1-2-besiktas-mac-ozeti"],
-                ["W4", "UCL", "01.11.2017", "20:00", "Monaco", "1 - 1", "Vodafone Park", "39,346", "Cloud", "D", " https://www.youtube.com/watch?v=L4jhOaCz6OE"],
-                ["W11", "TSL", "05.11.2017", "19:32", "Goztepe", "1 - 3", "Bornova Ilce", "8,723", "Drizzle", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/11/goztepe-1-3-besiktas-mac-ozeti"],
-                ["—", "Friendly", "11.11.2017", "15:00", "Astra Giurgiu", "1 - 1", "Vodafone Park", "—", "Cloud", "D", ""],
-                ["W12", "TSL", "17.11.2017", "20:00", "Akhisarspor", "0 - 0", "Vodafone Park", "—", "Cloud", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/12/besiktas-0-0-akhisar-genclikspor-mac-ozeti"],
-                ["W5", "UCL", "21.11.2017", "20:00", "Porto", "1 - 1", "Vodafone Park", "36,919", "Cloud", "D", "https://www.youtube.com/watch?v=6BqEr-ijjpw"],
-                ["W13", "TSL", "25.11.2017", "17:00", "Yeni Malatya", "0 - 0", "Yeni Malatya", "—", "Cloud", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/13/yeni-malatyaspor-0-0-besiktas-mac-ozeti"],
-                ["5th Tour — 1st Leg", "TSC", "28.11.2017", "14:30", "Manisaspor", "9 - 0", "Vodafone Park", "0", "Cloud", "W", "https://www.aspor.com.tr/turkiye-kupasi/kupatv/besiktas-9-gm-manisaspor-0-ozet-1511906774/mac-ozeti-izle/2661770"],
-                ["W14", "TSL", "02.12.2017", "19:30", "Galatasaray", "3 - 0", "Vodafone Park", "—", "Cloud", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/14/besiktas-3-0-galatasaray-mac-ozeti"],
-                ["W6", "UCL", "06.12.2017", "21:45", "RB Leipzig", "1 - 2", "Red Bull Arena", "42,558", "Drizzle", "W", "https://www.youtube.com/watch?v=CIimF-4kDKU&t=192s"],
-                ["W15", "TSL", "10.12.2017", "19:30", "Kayserispor", "1 - 1", "BB Kadir Has", "—", "Cloud", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/15/kayserispor-1-1-besiktas-mac-ozeti"],
-                ["5th Tour — 2nd Leg", "TSC", "12.12.2017", "21:00", "Manisaspor", "1 - 1", "Manisa 19 Mayis", "—", "Cloud", "D", "https://www.aspor.com.tr/turkiye-kupasi/kupatv/grandmedical-manisaspor-1-besiktas-1-ozet/mac-ozeti-izle/2661786"],
-                ["W16", "TSL", "17.12.2017", "19:30", "Osmanlispor FK", "5 - 1", "Vodafone Park", "—", "Cloud", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/16/besiktas-5-1-osmanlispor-mac-ozeti"],
-                ["W17", "TSL", "23.12.2017", "16:30", "Sivasspor", "2 - 1", "Yeni 4 Eylul", "—", "Cloud", "L", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/17/sivasspor-2-1-besiktas-mac-ozeti"],
-                ["Last 16 — 1st Leg", "TSC", "28.12.2017", "20:30", "Osmanlispor FK", "4 - 1", "Vodafone Park", "—", "Cloud", "W", "https://www.aspor.com.tr/turkiye-kupasi/kupatv/besiktas-4-osmanlispor-1-ozet/mac-ozeti-izle/2682594"],
-                ["—", "Friendly", "09.01.2018", "18:00", "ADO Den Haag", "2 - 2", "—", "200", "Sunny", "D", ""],
-                ["—", "Friendly", "12.01.2018", "17:00", "Skenderbeu", "3 - 2", "—", "—", "Sunny", "W", ""],
-                ["Last 16 — 2nd Leg", "TSC", "17.01.2018", "20:30", "Osmanlispor FK", "2 - 1", "Osmanli", "—", "Cloud", "L", " https://www.aspor.com.tr/turkiye-kupasi/kupatv/osmanlispor-2-besiktas-1-ozet/mac-ozeti-izle/2682595"],
-                ["W18", "TSL", "21.01.2018", "19:00", "Antalyaspor", "1 - 2", "Antalya", "—", "Cloud", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/18/antalyaspor-1-2-besiktas-mac-ozeti"],
-                ["W19", "TSL", "26.01.2018", "20:00", "Kasimpasa", "2 - 1", "Vodafone Park", "—", "Cloud", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/19/besiktas-2-1-kasimpasa-mac-ozeti"],
-                ["Quarter — 1st Leg", "TSC", "30.01.2018", "20:30", "Genclerbirligi", "3 - 1", "Vodafone Park", "—", "Cloud", "W", "https://www.aspor.com.tr/turkiye-kupasi/kupatv/besiktas-3-genclerbirligi-1-ozet/mac-ozeti-izle/2704493"],
-                ["W20", "TSL", "02.02.2018", "20:00", "Bursaspor", "2 - 2", "Bursa BB", "27.109", "Cloud", "D", "http://tr.beinsports.com/lig/spor-toto-super-lig/ozet/2017-2018/20/bursaspor-2-2-besiktas-mac-ozeti"],
-                ["Quarter — 2nd Leg", "TSC", "06.02.2018", "20:30", "Genclerbirligi", "0 - 1", "Ankara 19 Mayis", "—", "Cloud", "W", "https://www.aspor.com.tr/webtv/ziraatturkiyekupasi/genclerbirligi-0-besiktas-1-ozet"]
-            ];
-        });
-    </script>
+        <script>
+            var app = angular.module('bjkApp', []);
+            app.controller('bjkCtrl', function($scope){
+                $scope.matches = [
+                    ["—", "Friendly", "16.07.2017", "18:00", "Fortuna Sittard", "2 - 2", "Nevzat Demir", "—", "Sunny", "D", ""],
+                    ["—", "Friendly", "19.07.2017", "15:00", "Schalke 04", "2 - 3", "Zhuhai Sports Centre", "—", "Sunny", "L", ""],
+                    ["—", "Friendly", "25.07.2017", "21:00", "Valladolid", "2 - 2", "Marbella", "—", "Sunny", "D", ""],
+                    ["—", "Friendly", "27.07.2017", "21:00", "Las Palmas", "1 - 4", "Marbella", "—", "Sunny", "L", ""],
+                    ["—", "Friendly", "30.07.2017", "21:00", "R. Betis", "1 - 1", "Nuevo Mirador", "—", "Sunny", "D", ""],
+                    ["W1", "TSL", "13.08.2017", "21:45", "Antalyaspor", "2 - 0", "Vodafone Park", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/1/besiktas-2-0-antalyaspor-mac-ozeti"],
+                    ["W2", "TSL", "18.08.2017", "21:45", "Kasimpasa", "2 - 2", "Recep Tayyip Erdogan", "—", "Sunny", "D", "http://tr.beinsports.com/lig/spor-toto-super-lig/ozet/2017-2018/2/kasimpasa-2-2-besiktas-mac-ozeti"],
+                    ["W3", "TSL", "26.08.2017", "19:45", "Bursaspor", "2 - 1", "Vodafone Park", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/3/besiktas-2-1-bursaspor-mac-ozeti"],
+                    ["—", "Friendly", "02.09.2017", "19:00", "Kayserispor", "1 - 1", "Vodafone Park", "—", "Sunny", "D", ""],
+                    ["W4", "TSL", "09.09.2017", "17:00", "Karabukspor", "0 - 1", "Dr. Necmettin Seyhoglu", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/4/kardemir-karabukspor-0-1-besiktas-mac-ozeti"],
+                    ["W1", "UCL", "13.09.2017", "21:45", "Porto", "1 - 3", "Estadio do Dragao ", "42,429", "Sunny", "W", "https://www.youtube.com/watch?v=fj-BWj-NcHo"],
+                    ["W5", "TSL", "18.09.2017", "17:00", "Konyaspor", "2 - 0", "Vodafone Park", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/5/besiktas-2-0-konyaspor-mac-ozeti"],
+                    ["W6", "TSL", "23.09.2017", "19:30", "Fenerbahce", "2 - 1", "Sukru Saracoglu", "—", "Sunny", "L", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/6/fenerbahce-2-1-besiktas-mac-ozeti"],
+                    ["W2", "UCL", "26.09.2017", "21:45", "RB Leipzig", "2 - 1", "Vodafone Park", "36,641", "Drizzle", "W", "https://www.youtube.com/watch?v=c0lJLXg9ztU"],
+                    ["W7", "TSL", "01.10.2017", "19:30", "Trabzonspor", "2 - 2", "Vodafone Park", "—", "Drizzle", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/7/besiktas-2-2-trabzonspor-mac-ozeti"],
+                    ["W8", "TSL", "13.10.2017", "20:00", "Genclerbirligi", "2 - 1", "Ankara 19 Mayis", "—", "Sunny", "L", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/8/genclerbirligi-2-1-besiktas-mac-ozeti"],
+                    ["W3", "UCL", "17.10.2017", "21:45", "Monaco", "1 : 2", "Stade Louis II", "7,403", "Sunny", "W", "https://www.youtube.com/watch?v=C-U2UzjA8qs"],
+                    ["W9", "TSL", "23.10.2017", "20:00", "Basaksehir", "1 - 1", "Vodafone Park", "—", "Sunny", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/9/besiktas-1-1-istanbul-basaksehir-mac-ozeti"],
+                    ["W10", "TSL", "28.10.2017", "19:30", "Alanyaspor", "1 - 2", "Bahcesehir Okullari", "—", "Sunny", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/10/alanyaspor-1-2-besiktas-mac-ozeti"],
+                    ["W4", "UCL", "01.11.2017", "20:00", "Monaco", "1 - 1", "Vodafone Park", "39,346", "Cloud", "D", " https://www.youtube.com/watch?v=L4jhOaCz6OE"],
+                    ["W11", "TSL", "05.11.2017", "19:32", "Goztepe", "1 - 3", "Bornova Ilce", "8,723", "Drizzle", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/11/goztepe-1-3-besiktas-mac-ozeti"],
+                    ["—", "Friendly", "11.11.2017", "15:00", "Astra Giurgiu", "1 - 1", "Vodafone Park", "—", "Cloud", "D", ""],
+                    ["W12", "TSL", "17.11.2017", "20:00", "Akhisarspor", "0 - 0", "Vodafone Park", "—", "Cloud", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/12/besiktas-0-0-akhisar-genclikspor-mac-ozeti"],
+                    ["W5", "UCL", "21.11.2017", "20:00", "Porto", "1 - 1", "Vodafone Park", "36,919", "Cloud", "D", "https://www.youtube.com/watch?v=6BqEr-ijjpw"],
+                    ["W13", "TSL", "25.11.2017", "17:00", "Yeni Malatya", "0 - 0", "Yeni Malatya", "—", "Cloud", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/13/yeni-malatyaspor-0-0-besiktas-mac-ozeti"],
+                    ["5th Tour — 1st", "TSC", "28.11.2017", "14:30", "Manisaspor", "9 - 0", "Vodafone Park", "0", "Cloud", "W", "https://www.aspor.com.tr/turkiye-kupasi/kupatv/besiktas-9-gm-manisaspor-0-ozet-1511906774/mac-ozeti-izle/2661770"],
+                    ["W14", "TSL", "02.12.2017", "19:30", "Galatasaray", "3 - 0", "Vodafone Park", "—", "Cloud", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/14/besiktas-3-0-galatasaray-mac-ozeti"],
+                    ["W6", "UCL", "06.12.2017", "21:45", "RB Leipzig", "1 - 2", "Red Bull Arena", "42,558", "Drizzle", "W", "https://www.youtube.com/watch?v=CIimF-4kDKU&t=192s"],
+                    ["W15", "TSL", "10.12.2017", "19:30", "Kayserispor", "1 - 1", "BB Kadir Has", "—", "Cloud", "D", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/15/kayserispor-1-1-besiktas-mac-ozeti"],
+                    ["5th Tour — 2nd", "TSC", "12.12.2017", "21:00", "Manisaspor", "1 - 1", "Manisa 19 Mayis", "—", "Cloud", "D", "https://www.aspor.com.tr/turkiye-kupasi/kupatv/grandmedical-manisaspor-1-besiktas-1-ozet/mac-ozeti-izle/2661786"],
+                    ["W16", "TSL", "17.12.2017", "19:30", "Osmanlispor FK", "5 - 1", "Vodafone Park", "—", "Cloud", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/16/besiktas-5-1-osmanlispor-mac-ozeti"],
+                    ["W17", "TSL", "23.12.2017", "16:30", "Sivasspor", "2 - 1", "Yeni 4 Eylul", "—", "Cloud", "L", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/17/sivasspor-2-1-besiktas-mac-ozeti"],
+                    ["Last 16 — 1st", "TSC", "28.12.2017", "20:30", "Osmanlispor FK", "4 - 1", "Vodafone Park", "—", "Cloud", "W", "https://www.aspor.com.tr/turkiye-kupasi/kupatv/besiktas-4-osmanlispor-1-ozet/mac-ozeti-izle/2682594"],
+                    ["—", "Friendly", "09.01.2018", "18:00", "ADO Den Haag", "2 - 2", "—", "200", "Sunny", "D", ""],
+                    ["—", "Friendly", "12.01.2018", "17:00", "Skenderbeu", "3 - 2", "—", "—", "Sunny", "W", ""],
+                    ["Last 16 — 2nd", "TSC", "17.01.2018", "20:30", "Osmanlispor FK", "2 - 1", "Osmanli", "—", "Cloud", "L", " https://www.aspor.com.tr/turkiye-kupasi/kupatv/osmanlispor-2-besiktas-1-ozet/mac-ozeti-izle/2682595"],
+                    ["W18", "TSL", "21.01.2018", "19:00", "Antalyaspor", "1 - 2", "Antalya", "—", "Cloud", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/18/antalyaspor-1-2-besiktas-mac-ozeti"],
+                    ["W19", "TSL", "26.01.2018", "20:00", "Kasimpasa", "2 - 1", "Vodafone Park", "—", "Cloud", "W", "http://tr.beinsports.com/lig/super-lig/ozet/2017-2018/19/besiktas-2-1-kasimpasa-mac-ozeti"],
+                    ["Quarter — 1st", "TSC", "30.01.2018", "20:30", "Genclerbirligi", "3 - 1", "Vodafone Park", "—", "Cloud", "W", "https://www.aspor.com.tr/turkiye-kupasi/kupatv/besiktas-3-genclerbirligi-1-ozet/mac-ozeti-izle/2704493"],
+                    ["W20", "TSL", "02.02.2018", "20:00", "Bursaspor", "2 - 2", "Bursa BB", "27.109", "Cloud", "D", "http://tr.beinsports.com/lig/spor-toto-super-lig/ozet/2017-2018/20/bursaspor-2-2-besiktas-mac-ozeti"],
+                    ["Quarter — 2nd", "TSC", "06.02.2018", "20:30", "Genclerbirligi", "0 - 1", "Ankara 19 Mayis", "—", "Cloud", "W", "https://www.aspor.com.tr/webtv/ziraatturkiyekupasi/genclerbirligi-0-besiktas-1-ozet"],
+                    ["W21", "TSL", "10.02.2018", "19:00", "Karabukspor", "5 - 0", "Vodafone Park", "—", "Rainy", "W", "http://tr.beinsports.com/lig/spor-toto-super-lig/ozet/2017-2018/21/besiktas-5-0-kardemir-karabukspor-mac-ozeti"]
+                ];
+            });
+        </script>
+    </head>
 
     <body>
-        <div ng-app="besiktas" ng-controller="controller">
+        <div ng-app="bjkApp" ng-controller="bjkCtrl">
             <div class="AXtUg isnHCr animated fadeIn delayed_025s">
                 <div class="jQqHUs">
                     <div class="bUZGRr iHZvIS iSNGhk">
-                        <a class="gMWfKe eyLfWl hxhtjI" href="/">
+                        <a class="gMWfKe eyLfWl hxhtjI" href="index.html">
                             <img src="img/logo.png" style="height: 48px;" />
-                            <span>Besiktas JK</span>
+                            <span style="font-weight: 500;">Besiktas JK</span>
                         </a>
-                        <a class="eIpWdY dtSnOS" href="https://github.com/feathericons/feather/releases" target="_blank">v4.5.0</a>
+                        <a class="eIpWdY dtSnOS">v1.0.0</a>
                         <div class="LbkC"></div>
                         <div class="cXCHNs kSkfX">
                             <a class="cSTfEv jqXXaj kSkfX" href="https://twitter.com/intent/tweet?text=Besiktas%20JK%20—%20Simply%20beautiful%20fixture%20for%202017%20-%202018%20season%20by%20%40konukilit%20https%3A%2F%2Fsuyalcinkaya.github.io/besiktas" target="_blank">
                                 <img class="mr-4" src="img/message-circle.svg" />
                                 <span>Tweet</span>
                             </a>
-                            <ul id="nav" class="cSTfEv jqXXaj">
-                                <li class="kSkfX">
-                                    <a href=# class="cSTfEv kSkfX more">
-                                        <img class="mr-4" src="img/dollar-sign.svg" />
-                                        <span>Donate</span>
-                                    </a>
-                                    <ul id="popover">
-                                        <li class="mb-2">
-                                            <img src="img/logo.png">
-                                        </li>
-                                        <li>
-                                            <span>1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <a class="cSTfEv jqXXaj kSkfX" href="donate.html">
+                                <img class="mr-4" src="img/dollar-sign.svg" />
+                                <span>Donate</span>
+                            </a>
                             <a class="cSTfEv jqXXaj kSkfX" href="mailto:suyalcinkaya@live.com">
                                 <img class="mr-4" src="img/mail.svg" />
                                 <span>Contact</span>
@@ -191,7 +176,7 @@
 
                 </div>
             </div>
-            <footer class="animated fadeInUp delayed_075s">
+            <!--<footer class="animated fadeInUp delayed_075s">
                 <div class="footer--section">
                     <a class="dim no-underline color-inherit" href="http://suyalcinkaya.github.io">
                         <img src="img/zap.svg" />
@@ -212,7 +197,7 @@
                         </li>
                     </ul>
                 </div>
-            </footer>
+            </footer>-->
         </div>
     </body>
 </html>
